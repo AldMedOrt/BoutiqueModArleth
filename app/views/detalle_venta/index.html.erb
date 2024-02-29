@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Detalle venta</h1>
+
+<div id="detalle_venta">
+  <% @detalle_venta.each do |detalle_ventum| %>
+    <%= render detalle_ventum %>
+    <p>
+      <%= link_to "Show this detalle ventum", detalle_ventum %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New detalle ventum", new_detalle_ventum_path %>

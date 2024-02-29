@@ -1,0 +1,37 @@
+<%= form_with(model: comprobante) do |form| %>
+  <% if comprobante.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(comprobante.errors.count, "error") %> prohibited this comprobante from being saved:</h2>
+
+      <ul>
+        <% comprobante.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tipo_comprobante, style: "display: block" %>
+    <%= form.text_field :tipo_comprobante %>
+  </div>
+
+  <div>
+    <%= form.label :precio_total_venta, style: "display: block" %>
+    <%= form.text_field :precio_total_venta %>
+  </div>
+
+  <div>
+    <%= form.label :metodo_pago, style: "display: block" %>
+    <%= form.text_field :metodo_pago %>
+  </div>
+
+  <div>
+    <%= form.label :estado, style: "display: block" %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

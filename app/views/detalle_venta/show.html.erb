@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @detalle_ventum %>
+
+<div>
+  <%= link_to "Edit this detalle ventum", edit_detalle_ventum_path(@detalle_ventum) %> |
+  <%= link_to "Back to detalle venta", detalle_venta_path %>
+
+  <%= button_to "Destroy this detalle ventum", @detalle_ventum, method: :delete %>
+</div>

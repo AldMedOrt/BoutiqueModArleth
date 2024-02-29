@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Comprobantes</h1>
+
+<div id="comprobantes">
+  <% @comprobantes.each do |comprobante| %>
+    <%= render comprobante %>
+    <p>
+      <%= link_to "Show this comprobante", comprobante %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New comprobante", new_comprobante_path %>
